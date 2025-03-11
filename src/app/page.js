@@ -3,14 +3,29 @@ import DocxCard from "./component/DocxCard";
 import { SearchInput } from "./component/SearchInput";
 import { Checkbox } from "@/components/ui/checkbox"
 import NavBar from "./component/NavBar";
+import document from "./img/document.png"
+import Image from "next/image";
+import { fetchPosts } from '@/lib/api';
 
-export default function Home() {
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
+
+export default async function Home() {
+  const data = await fetchPosts(1, 5);
+  
   return (
     <div className="font-[family-name:'Inter'] bg-midnight">
       <NavBar/>
 
       <main className="flex flex-row">
-        <aside className="flex h-lvh w-96 bg-darker p-8">
+        <aside className="flex h-auto w-96 bg-darker p-8">
 
           <div className="flex flex-col gap-4 m-2">
           <h1 className="text-2xl font-bold">Filter Results</h1>
@@ -70,16 +85,61 @@ export default function Home() {
           </div>
         </aside>
 
-        <div className="flex flex-col w-full gap-4 bg-midnight p-8">
-          <h1 className="text-2xl">Recent Papers</h1>
-            <DocxCard></DocxCard>
+        <div className="flex flex-col w-full gap-4 mx-12 my-6 align-middle bg-midnight p-8">
+          <h1 className="text-3xl font-bold">Recent Papers</h1>
+            <DocxCard 
+              img={document}
+              title="ReVault: Cloud Repository with SEO Metadata Tagging for Archiving Thesis Works of PLM CISTM Students" 
+              description="Traditional systems for archiving research-based works rely on physical documentation or unstructured digital repositories, leading to inefficiencies in version tracking, categorization, and retrieval "
+              tags={["IT", "Design", "UI/UX"]}
+            />
             
-            <DocxCard></DocxCard>
+            <DocxCard 
+              img={document}
+              title="ReVault: Cloud Repository with SEO Metadata Tagging for Archiving Thesis Works of PLM CISTM Students" 
+              description="Traditional systems for archiving research-based works rely on physical documentation or unstructured digital repositories, leading to inefficiencies in version tracking, categorization, and retrieval "
+              tags={["IT", "Design", "UI/UX"]}
+            />
 
-            <DocxCard></DocxCard>
+            <DocxCard 
+              img={document}
+              title="ReVault: Cloud Repository with SEO Metadata Tagging for Archiving Thesis Works of PLM CISTM Students" 
+              description="Traditional systems for archiving research-based works rely on physical documentation or unstructured digital repositories, leading to inefficiencies in version tracking, categorization, and retrieval "
+              tags={["IT", "Design", "UI/UX"]}
+            />
+            
+            <DocxCard 
+              img={document}
+              title="ReVault: Cloud Repository with SEO Metadata Tagging for Archiving Thesis Works of PLM CISTM Students" 
+              description="Traditional systems for archiving research-based works rely on physical documentation or unstructured digital repositories, leading to inefficiencies in version tracking, categorization, and retrieval "
+              tags={["IT", "Design", "UI/UX"]}
+            />
 
+            <DocxCard 
+              img={document}
+              title="ReVault: Cloud Repository with SEO Metadata Tagging for Archiving Thesis Works of PLM CISTM Students" 
+              description="Traditional systems for archiving research-based works rely on physical documentation or unstructured digital repositories, leading to inefficiencies in version tracking, categorization, and retrieval "
+              tags={["IT", "Design", "UI/UX"]}
+            />
           <div className="flex flex-col justify-between gap-4">
           </div>
+
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious href="#" />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="#">1</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationEllipsis />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationNext href="#" />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
         </div>
       </main>
 

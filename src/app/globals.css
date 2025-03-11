@@ -6,10 +6,13 @@
 
 :root {
   --teal: #01B783;
+  --teal-gradient-left: #00C18B;
+  --teal-gradient-right: #005B41;
   --red-warning: #C33838;
   --midnight: #121212;
   --darker: #1B1B1B;
   --dusk: #272727;
+  --dusk-foreground: #1F1F1F;
   --dark-outline: #404040;
   --white-25: #ACACAC;
   --white-50: #C3C3C3;
@@ -56,9 +59,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: 'IBM Plex Mono';
+  --color-teal-gradient-left: #00C18B;
+  --color-teal-gradient-right: #005B41;
   --color-midnight: #121212;
   --color-darker: #1B1B1B;
   --color-dusk: #272727;
+  --color-dusk-foreground: #1f1f1f;
   --color-dark: #171717;
   --color-white-25: #ACACAC;
   --color-white-50: #C3C3C3;
@@ -148,6 +154,8 @@ body {
 @layer base {
   * {
     @apply border-border outline-ring/50;
+
+    transition: .2s ease all;
   }
 }
 

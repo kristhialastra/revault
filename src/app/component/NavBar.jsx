@@ -20,7 +20,7 @@ export default function NavBar() {
                 <li>
                     <a href="#">Notifications</a>
                 </li>
-                <button className="bg-teal p-2 px-4 font-sans flex items-center gap-2 rounded-lg cursor-pointer"><FaPlus/>Upload</button>
+                <button className="bg-gradient-to-r from-teal-gradient-left to-teal-gradient-right hover:bg-gradient-to-br p-2 px-4 font-sans flex items-center gap-2 rounded-lg cursor-pointer"><FaPlus/>Upload</button>
                 <div>
                 <Image src={avatar} className="w-10 rounded-full" alt="user profile picture"/>
                 </div>

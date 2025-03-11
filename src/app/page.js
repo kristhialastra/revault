@@ -34,7 +34,7 @@ export default async function Home() {
               <h2 className="font-bold">Program</h2>
               <div className="bg-dusk h-0.5 w-full"></div>
 
-              <ul className="ml-5 flex flex-col gap-2">
+              <ul className="ml-4 flex flex-col gap-2">
                 <li>
                 <Checkbox id="it-courses"/>
                 <label htmlFor="it-courses"> Information Technology</label>
@@ -49,7 +49,7 @@ export default async function Home() {
             <div className="flex flex-col gap-2">
               <h2 className="font-bold">Publication Date</h2>
               <div className="bg-dusk h-0.5 w-full"></div>
-              <ul className="ml-5 flex flex-col gap-2">
+              <ul className="ml-4 flex flex-col gap-2">
                 <li>
                   <Checkbox id="year-2025"/>
                   <label htmlFor="year-2025"> 2025</label>
@@ -65,7 +65,7 @@ export default async function Home() {
             <div className="flex flex-col gap-2">
               <h1 className="font-bold">Subject</h1>
               <div className="bg-dusk h-0.5 w-full"></div>
-              <ul className="ml-5 flex flex-col gap-2">
+              <ul className="ml-4 flex flex-col gap-2">
               <li>
                   <Checkbox id="sia-course"/>
                   <label htmlFor="sia-course"> SIA</label>
@@ -85,7 +85,7 @@ export default async function Home() {
           </div>
         </aside>
 
-        <div className="flex flex-col w-full gap-4 mx-12 my-6 align-middle bg-midnight p-8">
+        <div className="flex flex-col w-full gap-5 mx-12 my-6 align-middle bg-midnight p-8">
           <h1 className="text-3xl font-bold">Recent Papers</h1>
             <DocxCard 
               img={document}

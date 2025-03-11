@@ -1,7 +1,7 @@
 import React from "react";
 import { FiLink2 } from 'react-icons/fi'
 import Image from "next/image";
-import { FaBook, FaBookmark, FaBookOpen, FaLink } from "react-icons/fa6";
+import { FaBook, FaBookmark, FaBookOpen, FaFlag, FaLink } from "react-icons/fa6";
 
 const tagColors = {
     IT: "bg-dusk"
@@ -58,11 +58,24 @@ const DocsCard = (props) => {
                 )}
               </div>
               <p className='text-white text-md'>{props.description}</p>
-                <div className="mt-6 flex justify-around gap-4">
-                    <button className="flex flex-row items-center align-middle gap-2 px-6 py-2 bg-teal rounded-sm cursor-pointer "> <FaBookOpen/> Read</button>
-                    <button className="flex flex-row items-center align-middle gap-2 px-6 py-2 bg-dusk rounded-sm cursor-pointer "> <FaLink/> Cite</button>
-                    <button className="flex flex-row items-center align-middle gap-2 px-6 py-2 bg-dusk rounded-sm cursor-pointer hover:bg-midnight"> <FaBookmark/> Bookmark</button>
+              <div className="mt-6 flex flex-row items-center justify-between gap-4">
+                {/* Left Side Buttons */}
+                <span className="flex gap-4">
+                    <button className="flex flex-row items-center align-middle gap-2 px-6 py-2 bg-gradient-to-r from-teal-gradient-left to-teal-gradient-right hover:bg-gradient-to-br rounded-sm cursor-pointer">
+                    <FaBookOpen /> Read
+                    </button>
+                    <button className="flex flex-row items-center align-middle gap-2 px-6 py-2 bg-dusk rounded-sm cursor-pointer hover:bg-dusk-foreground">
+                    <FaLink /> Cite
+                    </button>
+                    <button className="flex flex-row items-center align-middle gap-2 px-6 py-2 bg-dusk rounded-sm cursor-pointer hover:bg-dusk-foreground">
+                    <FaBookmark /> Bookmark
+                    </button>
+                </span>
 
+                {/* Report Button */}
+                <button className="cursor-pointer">
+                    <FaFlag className="text-dusk hover:text-teal" />
+                </button>
                 </div>
           </div>
       </div>

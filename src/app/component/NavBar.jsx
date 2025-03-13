@@ -3,28 +3,83 @@ import { SearchInput } from "./SearchInput"
 import avatar from "../img/user.jpg";
 import { FaPlus } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 
+import {
+    LogOut,
+    Settings,
+    User,
+  } from "lucide-react"
+   
+  import { Button } from "@/components/ui/button"
+  import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuPortal,
+    DropdownMenuSeparator,
+    DropdownMenuShortcut,
+    DropdownMenuSub,
+    DropdownMenuSubContent,
+    DropdownMenuSubTrigger,
+    DropdownMenuRadioGroup,
+
+    DropdownMenuTrigger,
+  } from "@/components/ui/dropdown-menu"
 
 export default function NavBar() {
     return (
         <>
             <header className="flex flex-row align-middle z-50 items-center justify-between text-xl font-mono  w-full bg-dark p-8 px-16">
                 <div className="flex align-middle items-center gap-10">
-                    <a href="#" className="font-bold text-3xl text-teal">ReVault</a>
+                    <Link href="/" className="font-bold text-3xl text-teal">ReVault</Link>
                 <SearchInput placeholder="Search paper"/>
                 </div>
                 <ul className="flex flex-row items-center gap-8 text-lg">
                 <li>
-                    <a href="#">My Vault</a>
-                </li>
-                <li>
-                    <a href="#">Notifications</a>
+                    <Link href="/notifications" className="hover:text-teal">Notifications</Link>
                 </li>
                 <button className="bg-gradient-to-r from-teal-gradient-left to-teal-gradient-right hover:bg-gradient-to-br p-2 px-4 font-sans flex items-center gap-2 rounded-lg cursor-pointer"><FaPlus/>Upload</button>
-                <div>
-                <Image src={avatar} className="w-10 rounded-full" alt="user profile picture"/>
-                </div>
+                    {/* <Link href="/profile">
+                        <Image
+                            src={avatar}
+                            className="w-10 h-10 rounded-full cursor-pointer"
+                            alt="User profile picture"
+                        />
+                    </Link> */}
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                            <Button variant="ghost">
+                                <Image
+                                src={avatar}
+                                className="w-10 h-10 rounded-full cursor-pointer"
+                                alt="User profile picture"
+                                />
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className="bg-dark">
+                            <DropdownMenuGroup>
+                                <DropdownMenuItem>
+                                    <User />
+                                    <Link href="/profile">Profile</Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem>
+                                    <Settings />
+                                    <span>Settings</span>
+                                </DropdownMenuItem>
+                            </DropdownMenuGroup>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuItem>
+                                <LogOut />
+                                <span>Log out</span>
+                            </DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+
                 </ul>
+
             </header>
         </>
     )

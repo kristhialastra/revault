@@ -31,7 +31,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/component/DocxCard.jsx"  ],
+, "src/app/component/DocsCard.jsx", "src/app/component/ui/NavBar.jsx"  ],
   "exclude": [
     "node_modules"
   ]

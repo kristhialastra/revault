@@ -1,24 +1,30 @@
 import Image from 'next/image'
+import React from 'react'
+import avatar from "../img/user.jpg";
 
-//Import the profile interface from data.js
-import { iProfile } from "../services/data";
-
-export const ProfileCard = (props: iProfile) => {
-
-    const { name, email, username, role, photo } = props;
+export const ProfileCard = () => {
 
     return (
+        <div className='flex flex-row justify-between bg-dusk p-16 px-96'>
+            <div className='flex flex-row align-middle items-center gap-6'>
+            <div>
+                <Image src={avatar} alt="user profile"  className='w-28 rounded-full'/>
+            </div>
+            <div>
+                <h1 className='text-3xl font-bold'>John Allen Troy Valena</h1>
+                <p>202236115</p>
+                <p>CISTM - IT</p>
+            </div>
+            </div>
 
-        <div className="profile__card rounded-[15px] border border-solid">
-            <Image src={photo} alt={username} className="h-[200px]" height={1000} width={400} />
-            <div className=" bg-slate-300 p-3">
-                <h2 className="">Name: {name}</h2>
-                <p>Role: {role}</p>
-                <p>Email: {email}</p>
-                <p>follow @{username}</p>
+            <div>
+            <h1 className='font-bold mb-2'>Contribution Profile</h1>
+            <span className='flex gap-2'>
+                <p className='p-2 border border-white-25 rounded-md'>3 Papers</p>
+                <p className='p-2 border border-white-25 rounded-md'>100 Commends</p>
+            </span>
             </div>
         </div>
-
     )
 
 }

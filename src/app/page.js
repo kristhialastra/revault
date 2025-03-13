@@ -1,5 +1,5 @@
 import React from "react";
-import DocxCard from "./component/DocxCard";
+import DocsCard from "./component/DocsCard";
 import { SearchInput } from "./component/SearchInput";
 import { Checkbox } from "@/components/ui/checkbox"
 import NavBar from "./component/NavBar";
@@ -82,45 +82,48 @@ export default async function Home() {
                 </li>
               </ul>
             </div>
+            
+            <button className="bg-teal p-2 rounded-md mt-4 cursor-pointer">Apply Filter</button>
           </div>
         </aside>
 
-        <div className="flex flex-col w-full gap-5 mx-12 my-6 align-middle bg-midnight p-8">
+        <div className="flex flex-col w-full gap-5 mx-12 my-2 align-middle bg-midnight p-8">
           <h1 className="text-3xl font-bold">Recent Papers</h1>
-            <DocxCard 
+            <DocsCard
               img={document}
               title="ReVault: Cloud Repository with SEO Metadata Tagging for Archiving Thesis Works of PLM CISTM Students" 
               description="Traditional systems for archiving research-based works rely on physical documentation or unstructured digital repositories, leading to inefficiencies in version tracking, categorization, and retrieval "
               tags={["IT", "Design", "UI/UX"]}
             />
             
-            <DocxCard 
+            <DocsCard 
               img={document}
               title="ReVault: Cloud Repository with SEO Metadata Tagging for Archiving Thesis Works of PLM CISTM Students" 
               description="Traditional systems for archiving research-based works rely on physical documentation or unstructured digital repositories, leading to inefficiencies in version tracking, categorization, and retrieval "
               tags={["IT", "Design", "UI/UX"]}
             />
 
-            <DocxCard 
+            <DocsCard 
               img={document}
               title="ReVault: Cloud Repository with SEO Metadata Tagging for Archiving Thesis Works of PLM CISTM Students" 
               description="Traditional systems for archiving research-based works rely on physical documentation or unstructured digital repositories, leading to inefficiencies in version tracking, categorization, and retrieval "
               tags={["IT", "Design", "UI/UX"]}
             />
             
-            <DocxCard 
+            <DocsCard 
               img={document}
               title="ReVault: Cloud Repository with SEO Metadata Tagging for Archiving Thesis Works of PLM CISTM Students" 
               description="Traditional systems for archiving research-based works rely on physical documentation or unstructured digital repositories, leading to inefficiencies in version tracking, categorization, and retrieval "
               tags={["IT", "Design", "UI/UX"]}
             />
 
-            <DocxCard 
+            <DocsCard 
               img={document}
               title="ReVault: Cloud Repository with SEO Metadata Tagging for Archiving Thesis Works of PLM CISTM Students" 
               description="Traditional systems for archiving research-based works rely on physical documentation or unstructured digital repositories, leading to inefficiencies in version tracking, categorization, and retrieval "
               tags={["IT", "Design", "UI/UX"]}
             />
+
           <div className="flex flex-col justify-between gap-4">
           </div>
 

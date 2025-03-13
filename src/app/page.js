@@ -31,10 +31,10 @@ export default async function Home() {
           <h1 className="text-2xl font-bold">Filter Results</h1>
 
             <div className="flex flex-col gap-2">
-              <h2 className="font-bold">Program</h2>
+              <h2 className="font-bold text-teal">Program</h2>
               <div className="bg-dusk h-0.5 w-full"></div>
 
-              <ul className="ml-4 flex flex-col gap-2">
+              <ul className="ml-2 flex flex-col gap-2">
                 <li>
                 <Checkbox id="it-courses"/>
                 <label htmlFor="it-courses"> Information Technology</label>
@@ -47,9 +47,9 @@ export default async function Home() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <h2 className="font-bold">Publication Date</h2>
+              <h2 className="font-bold text-teal">Publication Date</h2>
               <div className="bg-dusk h-0.5 w-full"></div>
-              <ul className="ml-4 flex flex-col gap-2">
+              <ul className="ml-2 flex flex-col gap-2">
                 <li>
                   <Checkbox id="year-2025"/>
                   <label htmlFor="year-2025"> 2025</label>
@@ -63,9 +63,9 @@ export default async function Home() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <h1 className="font-bold">Subject</h1>
+              <h1 className="font-bold text-teal">Course</h1>
               <div className="bg-dusk h-0.5 w-full"></div>
-              <ul className="ml-4 flex flex-col gap-2">
+              <ul className="ml-2 flex flex-col gap-2">
               <li>
                   <Checkbox id="sia-course"/>
                   <label htmlFor="sia-course"> SIA</label>

@@ -67,14 +67,14 @@ export default function NavBar() {
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
                                     <Settings />
-                                    <span>Settings</span>
+                                    <Link href="/settings">Settings</Link>
                                 </DropdownMenuItem>
                             </DropdownMenuGroup>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem>
                                 <LogOut />
-                                <span>Log out</span>
-                            </DropdownMenuItem>
+                                <Link href="/logout">Log Out</Link>
+                                </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
 

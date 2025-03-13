@@ -3,18 +3,21 @@ import Image from 'next/image'
 import document from "@/app/img/document.png"
 import avatar from "@/app/img/user.jpg";
 
-const tagColors = {
-    IT: "bg-dusk"
-    // Add more tags as needed
-  };
-
 const NotificationCard = (props) => {
   return (
     <div className='flex flex-col align-middle items-center'>
-         <div className='bg-dark rounded-md border border-dusk-foreground p-8 px-10 m-2 w-6xl'>
+         <div className='bg-dark rounded-md border border-dusk-foreground p-8 m-2 w-6xl'>
               <div className='flex align-middle text-center justify-between items-center'>
                 <span className='flex align-middle items-center gap-4'>
-                  <Image src={avatar} alt="" className='w-10 rounded-full' />
+                    <div>
+                    {props.icon ? (
+                        props.icon
+                        ) : (
+                        props.avatar && (
+                            <Image src={props.avatar} alt="User Avatar" width={40} height={40} className='w-10 rounded-full' />
+                        )
+                        )}
+                    </div>
                   <p>{props.username} {props.action}</p>
                 </span>
                 <span className='flex justify-between'>

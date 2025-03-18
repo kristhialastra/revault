@@ -26,10 +26,10 @@ const LogIn = () => (
                 <div className='flex flex-row justify-between items-center m-3'>
                     <div className='flex flex-row justify-center'>
                         <input type="checkbox" name="" id="" placeholder=''/>
-                        <p className='font-inter text-sm text-align ml-1'>Remember Password</p>
+                        <p className='font-inter text-xs text-align ml-1'>Remember Password</p>
                     </div>
 
-                    <p className='font-inter text-teal text-sm text-align'>Forgot Password?</p>
+                    <p className='font-inter text-teal text-xs text-align'>Forgot Password?</p>
                 </div>
 
                 <button type="button" className='w-xs h-10 border-2 rounded-lg bg-gradient-to-r from-teal-gradient-left to-teal-gradient-right hover:bg-gradient-to-br font-sans'>Log In</button>

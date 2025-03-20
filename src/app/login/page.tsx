@@ -6,11 +6,13 @@ import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { IoLogoMicrosoft } from "react-icons/io5";
 
-// Reusable InputField Component
-const InputField = ({ label, type, name, value, onChange }) => (
-  <div className="flex flex-col justify-center items-center relative w-full mt-5">
+const InputField = ({ label, type, name, value, onChange, className = "" }) => (
+  <div
+    className={`flex flex-col justify-center items-center relative w-full mt-5 ${className}`}
+  >
     <input
-      className="h-54px block px-2.5 pb-2.5 pt-4 w-full text-sm bg-dusk rounded-lg border-1 outline-2 appearance-none dark:text-white dark:focus:border-teal focus:outline-none focus:ring-0 focus:border-teal peer"
+      className={`h-54px block px-2.5 pb-2.5 pt-4 text-sm bg-midnight rounded-lg border-1 outline-2 
+        appearance-none dark:text-white dark:focus:border-teal focus:outline-none focus:ring-0 focus:border-teal peer ${className}`}
       type={type}
       name={name}
       value={value}
@@ -19,7 +21,10 @@ const InputField = ({ label, type, name, value, onChange }) => (
     />
     <label
       htmlFor={name}
-      className="absolute font-inter text-xs text-white-25 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-dusk dark:bg-dusk px-2 peer-focus:px-2 peer-focus:text-teal peer-focus:dark:text-teal peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+      className="absolute font-inter text-xs text-white-25 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] 
+        bg-midnight dark:bg-midnight px-2 peer-focus:px-2 peer-focus:text-teal peer-focus:dark:text-teal peer-placeholder-shown:scale-100 
+        peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 
+        rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
     >
       {label}
     </label>
@@ -45,15 +50,15 @@ const LogIn = () => {
 
   return (
     <div className="h-screen w-screen overflow-hidden relative">
-      {/* Background with Blur */}
-      <Background imageUrl='/login-bg.png'/>
+      {/* Background with Blur using background component */}
+      <Background imageUrl="/login-bg.png" />
 
-      {/* Header */}
-      <Header/>
+      {/* Header using header component */}
+      <Header />
 
       {/* Main Content */}
       <main className="flex flex-row justify-center items-center relative z-10">
-        <div className="w-96 m-5 p-6 h-136 rounded-md outline-1 bg-dusk relative z-10">
+        <div className="w-96 m-5 p-6 h-136 rounded-md outline-1 bg-midnight relative z-10">
           {/* Title */}
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-4xl font-mono font-bold text-teal">ReVault</h1>
@@ -68,6 +73,7 @@ const LogIn = () => {
                 name="studentNumber"
                 value={formData.studentNumber}
                 onChange={handleChange}
+                className="w-xs"
               />
 
               <InputField
@@ -76,6 +82,7 @@ const LogIn = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
+                className="w-xs"
               />
 
               {/* Remember Password & Forgot Password */}
@@ -113,16 +120,16 @@ const LogIn = () => {
 
           {/* Divider */}
           <div className="flex flex-row justify-center items-center gap-2 text-base mt-5">
-            <div className="bg-white-25 h-0.5 w-full"></div>
+            <div className="bg-dusk h-0.5 w-full"></div>
             <p className="w-100">or Sign Up With</p>
-            <div className="bg-white-25 h-0.5 w-full"></div>
+            <div className="bg-dusk h-0.5 w-full"></div>
           </div>
 
           {/* Microsoft Login */}
           <div className="flex flex-row justify-center mt-4">
             <button
               type="button"
-              className="bg-white-75 w-xs h-12 text-dusk rounded-lg border-2 cursor-pointer font-sans font-extrabold flex flex-row justify-center items-center mt-2 gap-2 relative z-10"
+              className="bg-white-75 w-xs h-12 text-midnight rounded-lg border-2 cursor-pointer font-sans font-extrabold flex flex-row justify-center items-center mt-2 gap-2 relative z-10"
             >
               <IoLogoMicrosoft />
               Microsoft
@@ -133,7 +140,7 @@ const LogIn = () => {
           <div className="flex flex-row justify-center mb-4 mt-3">
             <button
               type="button"
-              className="bg-white-75 w-xs h-12 border-2 rounded-lg text-dusk cursor-pointer font-sans font-extrabold flex flex-row justify-center items-center gap-2 relative z-10"
+              className="bg-white-75 w-xs h-12 border-2 rounded-lg text-midnight cursor-pointer font-sans font-extrabold flex flex-row justify-center items-center gap-2 relative z-10"
             >
               <FcGoogle />
               Google

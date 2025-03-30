@@ -9,7 +9,7 @@ const componentMap = {
   // "Two-Factor Authentication": <TwoFactorAuth />,
   // "Account Activity Log": <AccountActivityLog />,
   // "Default Metadata Preference": <DefaultMetadataPreference />,
-  // "Document Comments": <DocumentComments />,
+  // "Document Commends": <DocumentComments />,
 };
 
 export default componentMap;

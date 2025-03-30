@@ -26,7 +26,7 @@ function Settings() {
     },
     {
       category: "Repository & Upload Settings",
-      labels: ["Default Metadata Preference", "Document Comments"],
+      labels: ["Default Metadata Preference", "Document Commends"],
     },
   ];
 

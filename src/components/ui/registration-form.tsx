@@ -141,7 +141,7 @@ export default function Form() {
             label="Confirm Password"
             type="password"
             name="confirmPassword"
-            placeholder="Enter Password Again"
+            placeholder="Confirm Password"
           />
         </div>
 
@@ -171,8 +171,8 @@ export default function Form() {
 
         {/* Submit Button */}
         <div className="col-span-2">
-          <button className="w-full text-white py-2 rounded-md bg-gradient-to-r from-teal-gradient-left to-teal-gradient-right hover:bg-gradient-to-br">
-            Create Account
+          <button className="w-full text-white py-2 rounded-md bg-gradient-to-r from-teal-gradient-left to-teal-gradient-right hover:bg-gradient-to-br font-inter cursor-pointer text-lg font-bold">
+            Next
           </button>
         </div>
       </form>

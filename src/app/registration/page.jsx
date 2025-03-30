@@ -2,7 +2,7 @@
 
 import Background from "@/components/ui/background";
 import Header from "@/components/ui/header";
-import Form from "@/components/ui/registration-form";
+import Form from "@/app/component/RegistrationForm";
 
 const Register = () => {
   return (

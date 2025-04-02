@@ -1,7 +1,7 @@
 "use client";
 
-import Background from "@/components/ui/background";
-import Header from "@/components/ui/header";
+import Background from "@/app/component/Background";
+import Header from "@/app/component/Header";
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { IoLogoMicrosoft } from "react-icons/io5";

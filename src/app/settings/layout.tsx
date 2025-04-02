@@ -1,14 +1,14 @@
-"use client";
-
-import React, { useState } from "react";
 import NavBar from "../component/NavBar";
-import SettingsList from "@/components/ui/settings-sidebar";
-import EditProfile from "../component/EditProfile";
-import componentMap from "@/lib/settingsComponentMap";
+import SettingsList from "../component/SettingsSideBar";
 
-function Settings() {
-  const [selectedLabel, setSelectedLabel] = useState("Edit Profile"); // Default to 'Edit Profile'
+export default function SettingsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  // Default to 'Edit Profile'
 
+  // Array of category and its respective labels array
   const settingsData = [
     {
       category: "General",
@@ -30,22 +30,26 @@ function Settings() {
     },
   ];
 
+  // A layout that renders the header, the settings sidebar, and the corresponding setting
   return (
     <div className="h-screen flex flex-col">
+      {/* Header */}
       <nav>
         <NavBar />
       </nav>
+
+      {/* Layout Content */}
       <div className="flex h-full">
         {/* Sidebar */}
         <aside className="w-auto h-full pl-17 pt-10 ml-5">
           <h1 className="text-4xl font-bold text-white-75">System Settings</h1>
 
+          {/* Settings List of category and their respective labels */}
           {settingsData.map((setting, index) => (
             <SettingsList
               key={index}
               category={setting.category}
               labels={setting.labels}
-              setSelectedLabel={setSelectedLabel} // Pass the function
               categoryClassName="text-base text-white-75 font-bold mb-3 mt-10"
               ulClassName=""
               labelClassName="pl-4 text-sm text-normal mb-3 cursor-pointer hover:text-teal"
@@ -53,13 +57,9 @@ function Settings() {
           ))}
         </aside>
 
-        {/* Main Content */}
-        <main className="flex-1 pt-29.5">
-          {componentMap[selectedLabel] || <EditProfile />}
-        </main>
+        {/* Main Content (dynamic) */}
+        <main className="flex-1 pt-29 pl-4 mb-500 h-auto">{children}</main>
       </div>
     </div>
   );
 }
-
-export default Settings;

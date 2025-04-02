@@ -3,8 +3,9 @@
 import WarningMessage from "@/app/component/WarningMessage";
 import { useState } from "react";
 import InputField from "./InputField";
+import Link from "next/link";
 
-export default function Form() {
+export default function Form({ link }) {
   const [selectedCourse, setSelectedCourse] = useState("");
 
   return (
@@ -22,7 +23,7 @@ export default function Form() {
           type="text"
           name="fullName"
           placeholder="Juan"
-          className="w-full"
+          inputClassName="w-full"
         />
 
         <InputField
@@ -30,7 +31,7 @@ export default function Form() {
           type="text"
           name="middleName"
           placeholder="Protacio"
-          className="w-full"
+          inputClassName="w-full"
         />
 
         {/* Last Name, Extension */}
@@ -39,7 +40,7 @@ export default function Form() {
           type="text"
           name="lastName"
           placeholder="Dela Cruz"
-          className="w-full"
+          inputClassName="w-full"
         />
 
         <InputField
@@ -47,7 +48,7 @@ export default function Form() {
           type="text"
           name="ext"
           placeholder="Jr."
-          className="w-1/3"
+          inputClassName="w-1/3"
         />
 
         <h1 className="col-span-2 font-mono text-teal font-bold text-2xl">
@@ -63,7 +64,7 @@ export default function Form() {
               type="text"
               name="studentNumber"
               placeholder="202512345"
-              className="w-full"
+              inputClassName="w-full"
             />
           </div>
 
@@ -147,7 +148,7 @@ export default function Form() {
         {/* Submit Button */}
         <div className="col-span-2">
           <button className="w-full text-white py-2 rounded-md bg-gradient-to-r from-teal-gradient-left to-teal-gradient-right hover:bg-gradient-to-br font-inter cursor-pointer text-lg font-bold">
-            Next
+            <Link href={link}> Next </Link>
           </button>
         </div>
       </form>

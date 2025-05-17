@@ -370,8 +370,10 @@ const ManageUserSettings = () => {
                         onChange={handleInputChange}
                         className="w-full p-2 pl-3 bg-dusk border border-[#444] rounded-xl text-white text-sm h-[45px] pr-8 appearance-none"
                       >
-                        <option>Librarian</option>
+                        <option>Librarian-in-Charge</option>
                         <option>Admin</option>
+                        <option value="">Admin Assistant</option>
+
                       </select>
                       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
                         <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -594,7 +596,7 @@ const ManageUserSettings = () => {
         <button 
           onClick={handleAddLibrarian}
           className="bg-gradient-to-r from-teal-gradient-left to-teal-gradient-right hover:bg-gradient-to-br p-2 px-4 font-sans flex items-center gap-2 rounded-lg cursor-pointer">
-          Add Librarian
+          Create New User
         </button>
       </div>
 

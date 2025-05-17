@@ -143,7 +143,7 @@ const LogIn = () => {
                 href="/registration/user-selection"
                 className="text-teal cursor-pointer"
               >
-                Create account
+                Sign Up
               </a>
             </p>
           </div>
